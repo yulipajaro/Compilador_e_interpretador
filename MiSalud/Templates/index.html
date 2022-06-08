@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compiladores</title>
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!--aqui agregamos el CSS en la forma que lo hace python con dJango-->
+
+</head>
+
+<body>
+
+    <div style="width:1000px;display:flex;">
+
+        <form method="post" style="width:600px;">
+            {% csrf_token %}
+            <div style="display: block;">
+                <h1>Interpretador</h1>
+
+
+                <input type="text" name="cadena" placeholder="ingrese su codigo aqui"
+                    style="height:500px;outline:none;width: 300px;border-radius: 3px;border: 1px solid #eee;margin-bottom: 20px;tex">
+                <input type="submit" name="submit" value="Validar y Compilar"
+                    style=" padding: 10px;color:rgb(0, 0, 0);background:rgb(73, 159, 29);width:320px;border:0;border-radius: 3px;cursor: pointer;font-weight: bold;">
+        </form>
+    </div>
+    <div style="display: block;">
+        <h1>Instrucciones</h1>
+        <p>asignacion : -><br>while : mientras <br>for : para  <br>if : si  <br>else : sino  <br>def : fn</p>
+        <div style="height:200px;">
+            
+            <!--- AQUI INSERTAS LAS INSTRUCCIONES + EJEMPLO-->
+        </div>
+        <h1>Programa:</h1>
+        <div style="height:300px">
+            <div style="border-style: solid;height: 270px; background-color: white;">
+                <!-- AQUI INSERTAS LO QUE MOSTRARA LA CONSOLA-->
+                
+            </div>
+        </div>
+    </div>
+
+    </div>
+    <button
+        style=" padding: 10px;color:rgb(0, 0, 0);background:rgb(206, 206, 25);width:100px;border:0;border-radius: 3px;cursor: pointer;font-weight: bold;align-content:center ;">Resetear</button>
+
+
+</body>
+
+</html>

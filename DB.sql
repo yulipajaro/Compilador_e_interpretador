@@ -1,0 +1,1 @@
+SELECT * FROM misalud_db2.auth_user;
